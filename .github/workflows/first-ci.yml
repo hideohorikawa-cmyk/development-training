@@ -20,3 +20,8 @@ jobs:
           test -f lesson2/index.html
           test -f lesson2/Containerfile
           echo "Required files exist!"
+
+      - name: Build container image
+        run: |
+          cd lesson2
+          podman build -t my-first-web .
